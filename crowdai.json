@@ -1,0 +1,7 @@
+{
+    "challenge_id" : "crowdai-mlagents-2018-obstacletower",
+    "grader_id": "crowdai-mlagents-2018-obstacletower",
+    "authors" : ["harperj"],
+    "description" : "Obstacle Tower random agent",
+    "gpu": false
+}

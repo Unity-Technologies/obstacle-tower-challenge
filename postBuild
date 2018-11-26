@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -ex
+
+curl https://storage.googleapis.com/obstacle-tower-build/obstacletower_linux.zip > obstacletower_linux.zip
+unzip obstacletower_linux.zip
