@@ -18,11 +18,11 @@ if __name__ == '__main__':
 
     env = ObstacleTowerEnv(environment_filename)
     if env.is_grading():
-        score = run_episode(env)
+        episode_reward = run_episode(env)
     else:
         while True:
-            reward = run_episode(env)
-            print("Episode reward: " + str(reward))
+            episode_reward = run_episode(env)
+            print("Episode reward: " + str(episode_reward))
 
     env.close()
 
