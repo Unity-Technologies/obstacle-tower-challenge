@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -ex
-
 ENV_PORT=$1
 ENV_FILENAME=$2
 
@@ -15,4 +13,11 @@ if [ -z "$2" ]
     ENV_FILENAME="/home/crowdai/ObstacleTower/obstacletower.x86_64"
 fi
 
-xvfb-run --auto-servernum --server-args='-screen 0 640x480x24' $ENV_FILENAME --port $ENV_PORT
+touch otc_out.txt
+xvfb-run --auto-servernum --server-args='-screen 0 640x480x24' $ENV_FILENAME --port $ENV_PORT > /dev/null 2&>1 &
+APP_PID=$!
+tail -f otc_out.json &
+TAIL_PID=$!
+
+wait $APP_PID
+kill $TAIL_PID
