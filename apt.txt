@@ -1,3 +1,4 @@
+unzip
 curl
 git
 xvfb
