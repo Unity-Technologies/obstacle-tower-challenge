@@ -1,33 +1,13 @@
 from obstacle_tower_env import ObstacleTowerEnv
 import sys
 
-def run_evaluation(env):
+def run_episode(env, first_observation):
     """
-    Runs an arbitrary number of episodes during evaluation
+    Runs a single episode
+    and expects that env.reset has been done before calling
+    this function.
     """
-    while True :
-        obs = env.reset()
-        if obs == False:
-            """
-                The evaluator returns observation==False after it has run
-                the required number of episodes. If it returns a valid
-                observation on an `env.reset` call, then the evaluator expects
-                to run another episode.
-            """
-            break
-        done = False
-        reward = 0.0
-
-        while not done:
-            action = env.action_space.sample()
-            obs, reward, done, info = env.step(action)
-        return reward
-
-def run_episode(env):
-    """
-    Runs a single episode during local debug
-    """
-    env.reset()
+    obs = first_observation
     done = False
     reward = 0.0
 
@@ -36,6 +16,21 @@ def run_episode(env):
         obs, reward, done, info = env.step(action)
     return reward
 
+def run_evaluation(env):
+    """
+    Runs an arbitrary number of episodes during evaluation
+    """
+    while True :
+        obs = env.reset()
+        if not obs:
+            """
+                The evaluator returns observation==False after it has run
+                the required number of episodes. If it returns a valid
+                observation on an `env.reset` call, then the evaluator expects
+                to run another episode.
+            """
+            break
+        run_episode(env, obs)
 
 if __name__ == '__main__':
     environment_filename = \
@@ -46,7 +41,8 @@ if __name__ == '__main__':
         run_evaluation(env)
     else:
         while True:
-            episode_reward = run_episode(env)
+            first_observation = env.reset()
+            episode_reward = run_episode(env, first_observation)
             print("Episode reward: " + str(episode_reward))
 
     env.close()
