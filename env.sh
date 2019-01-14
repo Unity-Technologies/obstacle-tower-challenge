@@ -10,10 +10,10 @@ fi
 
 if [ -z "$2" ]
   then
-    ENV_FILENAME="/home/crowdai/ObstacleTower/obstacletower.x86_64"
+    ENV_FILENAME="/home/crowdai/ObstacleTower/obstacletower_linux.x86_64"
 fi
 
-touch otc_out.txt
+touch otc_out.json
 xvfb-run --auto-servernum --server-args='-screen 0 640x480x24' $ENV_FILENAME --port $ENV_PORT > /dev/null 2&>1 &
 APP_PID=$!
 tail -f otc_out.json &
