@@ -30,3 +30,6 @@ docker exec -it obstacle_tower ./run.sh
 ```
 ./run.sh
 ```
+
+## Obstacle Tower Environment 
+TODO:  Create link to the obstacle tower environment that includes the specific license for the enviornment
