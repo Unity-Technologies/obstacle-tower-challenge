@@ -85,10 +85,71 @@ docker run \
   -it obstacle_tower_challenge:latest ./env.sh
 ```
 
-The environment script should output the evaluation state as it advances:
+The environment script should output the evaluation state as it advances, recording overall state as well as the progress within each episode for seeds 101-105:
 ```json
 {"state":"PENDING","floor_number_avg":0.0,"reward_avg":-1.0,"episodes":[],"last_update":"2019-02-09T00:17:15Z"}
 {"state":"IN_PROGRESS","floor_number_avg":0.0,"reward_avg":-1.0,"episodes":[{"state":"IN_PROGRESS","seed":101,"floor_number":0,"reward":0.0,"step_count":0}],"last_update":"2019-02-09T00:17:16Z"}
 ...
 ```
 
+## Submission
+
+To submit to the challenge you'll need to ensure you've set up an appropriate repository structure, create a private git repository at https://gitlab.aicrowd.com with the contents of your submission, and push a _git tag_ corresponding to the version of your repository you'd like to submit.
+
+### Repository Structure
+
+#### crowdai.json
+
+Each repository should have a `crowdai.json` file with the following fields:
+
+```json
+{
+    "challenge_id" : "aicrowd-mlagents-2018-obstacletower",
+    "grader_id": "aicrowd-mlagents-2018-obstacletower",
+    "authors" : ["aicrowd-user"],
+    "description" : "Random Obstacle Tower agent",
+    "gpu": false
+}
+```
+
+This file is used to identify your submission as a part of the Obstacle Tower Challenge.  You must use the `challenge_id` and `grader_id` specified above in the submission.  The `gpu` field specifies whether or not your model will require a GPU for evaluation.
+
+#### Submission environment configuration
+
+You can specify your software environment by using all the [available configuration options of repo2docker](https://repo2docker.readthedocs.io/en/latest/config_files.html).
+
+For example, to use Anaconda configuration files you can include an **environment.yml** file:
+```
+conda env export --no-build > environment.yml
+```
+
+It is important to include `--no-build` flag, which is important for allowing your Anaconda config to be replicable cross-platform.
+
+#### Code Entrypoint
+
+The evaluator will use `/home/otc/run.sh` as the entrypoint. Please remember to have a `run.sh` at the root which can instantiate any necessary environment variables and execute your code. This repository includes a sample `run.sh` file.
+
+### Submitting 
+To make a submission, you will have to create a private repository on [https://gitlab.aicrowd.com](https://gitlab.aicrowd.com).
+
+You will have to add your SSH Keys to your GitLab account by following the instructions [here](https://docs.gitlab.com/ee/gitlab-basics/create-your-ssh-keys.html).
+If you do not have SSH Keys, you will first need to [generate one](https://docs.gitlab.com/ee/ssh/README.html#generating-a-new-ssh-key-pair).
+
+Then you can create a submission by making a *tag push* to your repository, adding the correct git remote and pushing to the remote:
+
+```
+cd obstacle-tower-challenge
+# Add AICrowd git remote endpoint
+git remote add aicrowd git@gitlab.aicrowd.com:<YOUR_AICROWD_USER_NAME>/obstacle-tower-challenge.git
+git push aicrowd master
+
+# Create a tag for your submission and push
+git tag -am "v0.1" v0.1
+git push aicrowd master
+git push aicrowd v0.1
+
+# Note : If the contents of your repository (latest commit hash) does not change, 
+# then pushing a new tag will not trigger a new evaluation.
+```
+You now should be able to see the details of your submission at : 
+[gitlab.aicrowd.com/<YOUR_AICROWD_USER_NAME>/obstacle-tower-challenge/issues](gitlab.aicrowd.com/<YOUR_AICROWD_USER_NAME>/obstacle-tower-challenge/issues)
