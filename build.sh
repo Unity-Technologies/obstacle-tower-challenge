@@ -1,7 +1,6 @@
 export IMAGE_NAME="obstacle_tower_challenge"
 
-crowdai-repo2docker --no-run \
-  --user-id 1001 \
-  --user-name crowdai \
+aicrowd-repo2docker --no-run \
   --image-name ${IMAGE_NAME} \
+  --user-name otc \
   --debug .

@@ -1,3 +1,4 @@
 curl
 git
 xvfb
+ffmpeg

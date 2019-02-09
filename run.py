@@ -18,7 +18,7 @@ def run_evaluation(env):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('environment_filename', default='./ObstacleTower/obstacletower_linux', nargs='?')
+    parser.add_argument('environment_filename', default='./ObstacleTower/obstacletower', nargs='?')
     parser.add_argument('--docker_training', action='store_true')
     parser.set_defaults(docker_training=False)
     args = parser.parse_args()
@@ -30,6 +30,7 @@ if __name__ == '__main__':
         while True:
             episode_reward = run_episode(env)
             print("Episode reward: " + str(episode_reward))
+            env.reset()
 
     env.close()
 

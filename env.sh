@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -ex
+
 ENV_PORT=$1
 ENV_FILENAME=$2
 
@@ -10,7 +12,7 @@ fi
 
 if [ -z "$2" ]
   then
-    ENV_FILENAME="/home/crowdai/ObstacleTower/obstacletower_linux.x86_64"
+    ENV_FILENAME="/home/otc/ObstacleTower/obstacletower.x86_64"
 fi
 
 touch otc_out.json
