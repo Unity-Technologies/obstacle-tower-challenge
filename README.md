@@ -62,7 +62,7 @@ pip install -r requirements.txt
 
 ### Build the Docker image
 
-We've provided a build script that uses `aicrowd-repo2docker` to build an image `obstacle_tower_challenge:latest` from your repository:
+We've provided a build script that uses `aicrowd-repo2docker` to build an image `obstacle_tower_challenge:latest` from your repository.  Ensure [Docker](https://docs.docker.com/install/) is running on your machine, then run:
 ```
 ./build.sh
 ```
