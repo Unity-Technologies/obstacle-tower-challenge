@@ -5,4 +5,4 @@
 source activate base
 echo "root"
 
-python run.py --docker_training
+python run.py 
