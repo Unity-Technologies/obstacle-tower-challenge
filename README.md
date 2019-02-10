@@ -25,7 +25,7 @@ Next, install the following dependencies:
 ```
 pip install -r requirements.txt
 ```
-* **Obstacle Tower** Download the link for your OS [here](https://github.com/Unity-Technologies/obstacle-tower-env#download-the-environment) 
+* **Obstacle Tower (Your OS)** Download the link for your OS [here](https://github.com/Unity-Technologies/obstacle-tower-env#download-the-environment) 
   and unzip in the `obstacle-tower-challenge` folder from the cloned repository.
 
 Finally, you can run the environment using the included agent (in `run.py`) with random actions:
@@ -57,7 +57,7 @@ pip install aicrowd-repo2docker
 # or
 pip install -r requirements.txt
 ```
-* **Obstacle Tower** (same as above in "Local Setup for Training") Download the link for your OS [here](https://github.com/Unity-Technologies/obstacle-tower-env#download-the-environment) 
+* **Obstacle Tower (Linux)** Download the linux build for docker evaluation [here](https://github.com/Unity-Technologies/obstacle-tower-env#download-the-environment) 
   and unzip in the `obstacle-tower-challenge` folder from the cloned repository.
 
 ### Build the Docker image
