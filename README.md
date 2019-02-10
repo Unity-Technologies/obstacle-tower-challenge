@@ -1,3 +1,5 @@
+![alt text](banner.png "Obstacle Tower Challenge")
+
 # Obstacle Tower Challenge Starter Kit
 
 This repository provides instructions for how to submit to the [Obstacle Tower Challenge](https://unity3d.com/otc).
@@ -6,7 +8,6 @@ Your goal in the Obstacle Tower is to have your agent traverse the floors of a p
 climb to the highest level possible.  Each level is progressively more difficult, and you'll be tested against a 
 towers generated with random seeds your agent hasn't seen before and thus will need to generalize from the 100 
 provided tower seeds.
-
 
 ## Local Setup for Training
 
