@@ -104,8 +104,8 @@ Each repository should have a `crowdai.json` file with the following fields:
 
 ```json
 {
-    "challenge_id" : "aicrowd-mlagents-2018-obstacletower",
-    "grader_id": "aicrowd-mlagents-2018-obstacletower",
+    "challenge_id" : "unity-obstacle-tower-challenge-2019",
+    "grader_id": "unity-obstacle-tower-challenge-2019",
     "authors" : ["aicrowd-user"],
     "description" : "Random Obstacle Tower agent",
     "gpu": false

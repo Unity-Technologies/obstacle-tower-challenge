@@ -1,7 +1,7 @@
 {
-    "challenge_id" : "crowdai-mlagents-2018-obstacletower",
-    "grader_id": "crowdai-mlagents-2018-obstacletower",
-    "authors" : ["harperj"],
+    "challenge_id" : "unity-obstacle-tower-challenge-2019",
+    "grader_id": "unity-obstacle-tower-challenge-2019",
+    "authors" : ["aicrowd-user"],
     "description" : "Obstacle Tower random agent",
     "gpu": false
 }
