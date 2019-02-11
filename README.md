@@ -128,7 +128,7 @@ It is important to include `--no-build` flag, which is important for allowing yo
 
 #### Code Entrypoint
 
-The evaluator will use `/home/otc/run.sh` as the entrypoint. Please remember to have a `run.sh` at the root which can instantiate any necessary environment variables and execute your code. This repository includes a sample `run.sh` file.
+The evaluator will use `/home/aicrowd/run.sh` as the entrypoint. Please remember to have a `run.sh` at the root which can instantiate any necessary environment variables and execute your code. This repository includes a sample `run.sh` file.
 
 ### Submitting 
 To make a submission, you will have to create a private repository on [https://gitlab.aicrowd.com](https://gitlab.aicrowd.com).
