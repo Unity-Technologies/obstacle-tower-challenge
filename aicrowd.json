@@ -2,6 +2,6 @@
     "challenge_id" : "unity-obstacle-tower-challenge-2019",
     "grader_id": "unity-obstacle-tower-challenge-2019",
     "authors" : ["harperj"],
-    "description" : "Obstacle Tower random agent",
+    "description" : "Obstacle Tower random agent - test1",
     "gpu": false
 }
