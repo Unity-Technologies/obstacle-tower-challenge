@@ -99,9 +99,9 @@ To submit to the challenge you'll need to ensure you've set up an appropriate re
 
 ### Repository Structure
 
-#### crowdai.json
+#### aicrowd.json
 
-Each repository should have a `crowdai.json` file with the following fields:
+Each repository should have a `aicrowd.json` file with the following fields:
 
 ```json
 {
