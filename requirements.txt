@@ -1,2 +1,2 @@
-git+git://github.com/Unity-Technologies/obstacle-tower-env@master
+git+git://github.com/Unity-Technologies/obstacle-tower-env@v1.1
 aicrowd-repo2docker
