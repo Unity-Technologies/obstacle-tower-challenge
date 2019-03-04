@@ -12,7 +12,7 @@ fi
 
 if [ -z "$2" ]
   then
-    ENV_FILENAME="/home/otc/ObstacleTower/obstacletower.x86_64"
+    ENV_FILENAME="./ObstacleTower/obstacletower.x86_64"
 fi
 
 touch otc_out.json
