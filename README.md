@@ -109,11 +109,12 @@ Each repository should have a `aicrowd.json` file with the following fields:
     "grader_id": "unity-obstacle-tower-challenge-2019",
     "authors" : ["aicrowd-user"],
     "description" : "Random Obstacle Tower agent",
-    "gpu": false
+    "gpu": false,
+    "debug": false
 }
 ```
 
-This file is used to identify your submission as a part of the Obstacle Tower Challenge.  You must use the `challenge_id` and `grader_id` specified above in the submission.  The `gpu` field specifies whether or not your model will require a GPU for evaluation.
+This file is used to identify your submission as a part of the Obstacle Tower Challenge.  You must use the `challenge_id` and `grader_id` specified above in the submission.  The `gpu` field specifies whether or not your model will require a GPU for evaluation. You can set the `debug` field to `true` if you want to view logs of your submission for debugging purposes ([more information here](https://discourse.aicrowd.com/t/announcement-debug-your-submissions/591)).
 
 #### Submission environment configuration
 
