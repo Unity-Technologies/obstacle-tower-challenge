@@ -74,17 +74,21 @@ the environment within a separate container:
 ```
 # Start the container running your agent script.
 docker run \
+  --rm \
   --env OTC_EVALUATION_ENABLED=true \
   --network=host \
   -it obstacle_tower_challenge:latest ./run.sh
 
 # In another terminal window, execute the environment.
 docker run \
+  --rm \
   --env OTC_EVALUATION_ENABLED=true \
   --env OTC_DEMO_EVALUATION=true \
   --network=host \
   -it obstacle_tower_challenge:latest ./env.sh
 ```
+
+To use GPU, add the tag `--runtime=nvidia` after `docker run`.
 
 The environment script should output the evaluation state as it advances, recording overall state as well as the progress within each episode for seeds 101-105:
 ```json
