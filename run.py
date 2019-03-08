@@ -4,12 +4,14 @@ import argparse
 
 def run_episode(env):
     done = False
-    reward = 0.0
+    episode_reward = 0.0
     
     while not done:
         action = env.action_space.sample()
         obs, reward, done, info = env.step(action)
-    return reward
+        episode_reward += reward
+        
+    return episode_reward
 
 def run_evaluation(env):
     while not env.done_grading():
