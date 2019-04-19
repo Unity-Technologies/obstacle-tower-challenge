@@ -146,12 +146,13 @@ git remote add aicrowd git@gitlab.aicrowd.com:<YOUR_AICROWD_USER_NAME>/obstacle-
 git push aicrowd master
 
 # Create a tag for your submission and push
-git tag -am "v0.1" v0.1
+git tag -am "submission-v0.1" submission-v0.1
 git push aicrowd master
-git push aicrowd v0.1
+git push aicrowd submission-v0.1
 
 # Note : If the contents of your repository (latest commit hash) does not change, 
 # then pushing a new tag will not trigger a new evaluation.
+# Note : Only tag which begin with "submission-" will trigger an evaluation
 ```
 You now should be able to see the details of your submission at : 
 [gitlab.aicrowd.com/<YOUR_AICROWD_USER_NAME>/obstacle-tower-challenge/issues](gitlab.aicrowd.com/<YOUR_AICROWD_USER_NAME>/obstacle-tower-challenge/issues)
