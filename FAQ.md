@@ -6,7 +6,7 @@
 * Start your agent code by first creating the `ObstacleTowerEnv` object before anything else (including larger imports).
     If you create the environment "too late", it may have issues connecting to the OT binary running for evaluation.
 
-## Getting "No module named ..." for common packages (e.g. Numpy) ([discussion here](https://discourse.aicrowd.com/t/solved-no-module-named-numpy-or-similar/1238)]
+## Getting "No module named ..." for common packages (e.g. Numpy) ([discussion here](https://discourse.aicrowd.com/t/solved-no-module-named-numpy-or-similar/1238))
 
 * If you are using older version of the `run.sh` example, remove/comment out part with `source activate base`. 
 
