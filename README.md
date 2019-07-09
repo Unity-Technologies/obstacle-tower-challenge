@@ -1,5 +1,7 @@
 ![alt text](banner.png "Obstacle Tower Challenge")
 
+## Having troubles with your submission? Check the [FAQ](FAQ.md) and recent [discussion](https://discourse.aicrowd.com/c/unity-obstacle-tower-challenge) for possible solutions.
+
 # Obstacle Tower Challenge Starter Kit
 
 This repository provides instructions for how to submit to the [Obstacle Tower Challenge](https://unity3d.com/otc).
